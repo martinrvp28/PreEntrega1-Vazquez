@@ -1,0 +1,39 @@
+
+.navBar{
+
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+
+}
+
+.navBar img{
+
+    height:190px;
+    width: 190px;
+
+}
+
+.navBar ul {
+
+list-style: none;
+display: flex;
+gap: 50px;
+
+}
+
+.navBar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    font-weight: bold;
+    
+}
+
+.catList{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+}
