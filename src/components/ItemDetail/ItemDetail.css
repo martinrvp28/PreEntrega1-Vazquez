@@ -1,0 +1,63 @@
+
+.detailContainer{
+    display: grid;
+    grid-template-columns: 40% 50%;
+    margin: 50px;
+    gap: 25px;
+}
+
+picture {
+    display: flex;
+    justify-content: center;
+}
+
+picture img {
+    width: 80%;
+    display: flex;
+}
+
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.title h2{
+    font-size: 40px;
+}
+
+.stock{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.dataContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.data{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    padding: 20px;
+    margin: 0px;
+    min-width: 300px;
+
+    box-shadow: 0px 0px 5px 0px #c1c1c1;
+
+}
+
+.price{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0px;
+}

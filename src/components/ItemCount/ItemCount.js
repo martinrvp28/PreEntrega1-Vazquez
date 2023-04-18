@@ -23,19 +23,26 @@ const decrement = () => {
 
     return(
 
-        <div className='Counter'>
+        <div className='containerBox'>
 
-            <div className='Controls'>
+            <div>
 
-                <button className='Button' onClick={decrement}>-</button>
-                <h4 className='Number'>{quantity}</h4>
-                <button className='Button' onClick={increment}>+</button>
+                <p className='units'>Unidades</p>
+
+                <div className='Controls'>
+
+                    <button className='Button' onClick={decrement}>-</button>
+                    <h4 className='Number'>{quantity}</h4>
+                    <button className='Button' onClick={increment}>+</button>
+
+                </div>
 
             </div>
 
             <div>
                 <button className='Button' onClick={() => onAdd(quantity)} disabled={!stock}>
-                    Agregar al Carrito
+                    <img src='/img/cart.png'/>
+                    Agregar
                 </button>
             </div>
 

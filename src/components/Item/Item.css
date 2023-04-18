@@ -32,4 +32,19 @@ header h2{
 
 footer{
     margin-top: 8px;
+
+}
+
+.Options {
+    text-decoration: none;
+    color: black;
+    border: solid 1px grey;
+    padding: 4px;
+    border-radius: 8px;
+    text-align: center;
+
+}
+
+.Options:hover{
+    background-color: rgba(78, 78, 78, 0.205);
 }
