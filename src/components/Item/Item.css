@@ -1,0 +1,35 @@
+.ItemImg{
+    width: 100%;
+    height: 100%;
+}
+
+.CardItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.CardItem picture{
+    height: 200px;
+    width: 200px;
+}
+
+header h2{
+    margin: 5px;
+    font-size: 120%;
+}
+
+.Info{
+    font-size: 150%;
+    font-weight: bold;
+    margin: 0;
+}
+
+.Info2{
+    margin: 5px;
+}
+
+footer{
+    margin-top: 8px;
+}

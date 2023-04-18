@@ -2,14 +2,14 @@
 .navBar{
 
     display: grid;
-    grid-template-columns: 10% 80% 10%;
+    grid-template-columns: 15% 70% 15%;
+    margin: 50px 50px 20px 50px;
 
 }
 
 .navBar img{
 
-    height:190px;
-    width: 190px;
+    width: 80%;
 
 }
 
@@ -17,7 +17,7 @@
 
 list-style: none;
 display: flex;
-gap: 50px;
+gap: 90px;
 
 }
 
@@ -27,6 +27,11 @@ gap: 50px;
     font-size: large;
     font-weight: bold;
     
+}
+
+.navBar ul li:hover{
+    transform: scale(1.1);
+    transition-duration: .2s;
 }
 
 .catList{

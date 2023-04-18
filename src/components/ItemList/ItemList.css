@@ -1,0 +1,7 @@
+.ListGroup{
+
+    width: 85%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25% ;
+    gap: 100px 0px;
+}
