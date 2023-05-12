@@ -1,15 +1,27 @@
 
 .navBar{
 
-    display: grid;
-    grid-template-columns: 15% 70% 15%;
-    margin: 50px 50px 20px 50px;
+    display: flex;
+    flex-direction: column;
+    border-top: solid 35px red;
 
+}
+
+.containerLogo-cart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 40px;
+}
+
+.containerLogo-cart a{
+    max-width: 100px;
 }
 
 .navBar img{
 
-    width: 80%;
+    width: 100%;
+    float: left;
 
 }
 
@@ -24,14 +36,20 @@ gap: 90px;
 .navBar ul li a {
     text-decoration: none;
     color: black;
-    font-size: large;
+    font-size: medium;
     font-weight: bold;
+    color: white;
     
 }
 
 .navBar ul li:hover{
-    transform: scale(1.1);
-    transition-duration: .2s;
+
+    transform: scale(1.05);
+    transition-duration: .1s;
+}
+
+.navBar ul li a:hover{
+    color: yellow;
 }
 
 .catList{
@@ -40,5 +58,33 @@ gap: 90px;
     justify-content: center;
     align-items: center;
     gap: 50px;
+    background-color: red;
 
+}
+
+.inputSearch{
+    height: 30px;
+    width: 300px;
+    background-color: rgb(231, 231, 231);
+    border: none;
+    border-radius: 25px;
+}
+
+.inputSearch::placeholder {
+    padding: 20px;
+}
+
+
+.inputImg{
+    width: 20px;
+
+}
+
+
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }

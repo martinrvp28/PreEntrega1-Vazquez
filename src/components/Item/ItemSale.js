@@ -1,12 +1,20 @@
-import './Item.css'
+import './ItemSale.css'
 import { Link } from 'react-router-dom'
+import { useState } from 'react';
 
-const Item = ({id, name, img, price, stock}) => {
+const ItemSale = ({id, name, img, price, offprice, disc,}) => {
+
+    const discountedPrice = price * (1 - disc / 100);
 
     return(
         <article className='CardItem'>
 
-            <picture>
+                <div className='containerBadgeDisc'>
+                    <span>%{disc} OFF</span>
+                </div>
+
+            <picture className='containerImg-Disc'>
+
                 
                 <img src={img} alt={name} className='ItemImg' />
 
@@ -22,9 +30,11 @@ const Item = ({id, name, img, price, stock}) => {
 
             <section>
     
-                <p className='Info'>
-                    ${price}
-                </p>
+                <div className='prices'>
+                <p className='InfoDisc'>Antes <span className='tachado' >${price}</span></p>
+                <p className='Info'>${discountedPrice}</p>
+                </div>
+                
 
             </section>
 
@@ -42,4 +52,4 @@ const Item = ({id, name, img, price, stock}) => {
 
 
 
-export default Item;
+export default ItemSale;

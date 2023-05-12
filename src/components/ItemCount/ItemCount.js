@@ -8,14 +8,12 @@ const [quantity,setQuantity] = useState(initial)
 const increment = () => {
     if (quantity<stock) {
         setQuantity(quantity+1)
-        console.log("aca sumamos");
     }
 }
 
 const decrement = () => {
     if (quantity>1) {
-        setQuantity(quantity-1)
-        console.log("aca restamos");
+        setQuantity(quantity-1)  
     }
 }
 

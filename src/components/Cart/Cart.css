@@ -1,0 +1,58 @@
+.containerActions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+
+.cartContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.cartContainer table{
+    border-collapse: collapse;
+}
+
+.cartContainer table tr th {
+
+    padding: 30px;
+}
+
+.cartContainer table tr{
+
+   border-bottom: solid 1px rgb(231, 231, 231);
+}
+
+.containerNoItems{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 120px;
+    gap: 20px;
+}
+
+.containerNoItems a{
+
+    text-decoration: none;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 4px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgb(255, 0, 0);
+    width: 200px;
+
+}
+
+.containerNoItems a:hover{
+    background-color: white;
+    color: red;
+    border: 1px solid red;
+}
