@@ -1,4 +1,10 @@
-
+.containerForm{
+    display: flex;
+    flex-direction: column;
+    max-width: 650px;
+    padding: 20px;
+    margin: 100px auto;
+}
 .containerFinalOrder{
     display: flex;
     flex-direction: column;
@@ -22,3 +28,22 @@
     font-size: 2rem;
     
 }
+
+@media only screen and (max-width:576px) {
+    
+    .containerFinalOrder{
+        max-width: 500px;
+    }
+
+    .containerFinalOrder h2{
+        font-size: 1.2rem;
+    }
+
+    .containerFinalOrder ul li{
+        list-style: none;
+        margin: 5px;
+        font-size: 1.2rem;
+        text-align: left;
+    }
+}
+

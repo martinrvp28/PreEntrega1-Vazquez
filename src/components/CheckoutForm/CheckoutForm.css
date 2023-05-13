@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container form{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+    width: 500px;
+    height: 150px;
+}
+
+.container form label{
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    
+}
+
+.button{
+    background-color: red;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    padding: 5px;
+    font-weight: bold;
+}

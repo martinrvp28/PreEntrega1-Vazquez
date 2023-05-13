@@ -1,36 +1,21 @@
-
-.navBar{
-
+.navBar {
     display: flex;
     flex-direction: column;
     border-top: solid 35px red;
-
 }
 
-.containerLogo-cart{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0px 40px;
-}
-
-.containerLogo-cart a{
-    max-width: 100px;
-}
-
-.navBar img{
-
+.logo{
     width: 100%;
     float: left;
-
 }
 
 .navBar ul {
-
-list-style: none;
-display: flex;
-gap: 90px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 90px;
+    background-color: red;
 }
 
 .navBar ul li a {
@@ -39,52 +24,87 @@ gap: 90px;
     font-size: medium;
     font-weight: bold;
     color: white;
-    
 }
 
-.navBar ul li:hover{
-
+.navBar ul li:hover {
     transform: scale(1.05);
-    transition-duration: .1s;
+    transition-duration: 0.1s;
 }
 
-.navBar ul li a:hover{
+.navBar ul li a:hover {
     color: yellow;
 }
 
-.catList{
-
+.containerLogo-cart {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 50px;
+    margin: 0px 40px;
+}
+
+.containerLogo-cart a {
+    max-width: 100px;
+}
+
+.cart {
+    margin-left: auto;
+}
+
+.catList {
+    position: relative;
     background-color: red;
-
 }
 
-.inputSearch{
-    height: 30px;
-    width: 300px;
-    background-color: rgb(231, 231, 231);
-    border: none;
-    border-radius: 25px;
+.menu-icon {
+    display: none;
 }
 
-.inputSearch::placeholder {
-    padding: 20px;
-}
-
-
-.inputImg{
+.icon {
     width: 20px;
-
+    height: 20px;
+    background-color: #ff0000;
+    margin-right: 5px;
+    margin: 15px;
 }
 
-
-
-form{
+@media (max-width: 768px) {
+    .menu-icon {
     display: flex;
+    align-items: center;
+    cursor: pointer;
+    }
+
+    .navBar ul {
+        display: none;
+    }
+
+    .menu {
+    position: static;
+    background-color: transparent;
+    padding: 0;
+    box-shadow: none;
+    display: flex;
+    }
+
+    .menu.active {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    }
+
+    .menu.active + .navBar ul {
+    display: flex;
+    }
+
+    .menu li {
+    margin-bottom: 0;
+    }
+
+    .icon{
+        height: 20px;
+        display: flex;
+        justify-content: start;
+    }
 }

@@ -39,8 +39,8 @@ const decrement = () => {
 
             <div>
                 <button className='Button' onClick={() => onAdd(quantity)} disabled={!stock}>
-                    <img src='/img/cart.png'/>
                     Agregar
+                    <img src='/img/cart.png'/>
                 </button>
             </div>
 

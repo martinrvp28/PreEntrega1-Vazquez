@@ -104,8 +104,8 @@ const Checkout = () => {
     }
 
     return( 
-        <div>
-            <h1>CheckOut</h1>
+        <div className="containerForm">
+            <h1>Enviar pedido</h1>
             <CheckoutForm onConfirm={createOrder}/>
         </div>
     )

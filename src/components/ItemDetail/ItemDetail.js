@@ -6,20 +6,33 @@ import { CartContext } from "../Context/CartContext";
 
 
 
-const ItemDetail = ({id,name,price,img,category,stock,description}) => {
+const ItemDetail = ({id,name,price,img,category,stock,description,disc}) => {
 
     const [quantityAdded, setQuantityAdded] = useState(0);
 
-    const {addItem} = useContext(CartContext)
+    const {addItem, DiscPrice} = useContext(CartContext)
+
+    const discountedPrice = DiscPrice(price,disc);
+
 
     const HandleOnAddClick = (quantity) => {
         setQuantityAdded(quantity);
 
-        const item = {
-            id, name , price, img, stock
-        }
+        if (disc) {
 
-        addItem(item,quantity);
+            const item = {
+                id, name , price:discountedPrice, img, stock
+            }
+            addItem(item,quantity);
+
+        } else {
+
+            const item = {
+                id, name , price, img, stock
+            }
+            addItem(item,quantity);
+
+        }
     }
 
     return(
@@ -38,17 +51,29 @@ const ItemDetail = ({id,name,price,img,category,stock,description}) => {
                 <div className="dataContainer">
 
                     <section>
-                        <p>{description}</p>
+                        <p className="description">{description}</p>
                         <p className="stock">Stock disponible:{stock}</p>
                     </section>
 
                     <div className="data">
 
-                        <p className="price">${price}</p>
+                        <div>
+                            {disc? (
+                            <div className="containerPrices">
+                                <p className="priceBefore">Antes <span className="tachado">${price}</span></p>
+                                <p className="price">${discountedPrice}</p>
+                            </div>
+                            ) :
+                             <p className="price">${price}</p>}
+                        </div>
+
 
                         {
                             quantityAdded>0 ? (
-                                <Link to='/cart' className='Option'>Finalizar Compra</Link>
+                                <div className="containerOption">
+                                    <Link to='/' className='Option'>Volver a Productos</Link>
+                                    <Link to='/cart' className='Option'>Finalizar Compra</Link>
+                                </div>
                             ):
 
                             (<ItemCount stock={stock} initial={1} onAdd={HandleOnAddClick}/>)

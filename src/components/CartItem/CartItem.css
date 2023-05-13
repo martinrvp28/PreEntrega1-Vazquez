@@ -55,3 +55,12 @@
 .containerBut a {
     text-decoration: none;
 }
+
+
+@media only screen and (max-width:576px){
+
+    .cartImg {
+        display: none;
+    }
+
+}

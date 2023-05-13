@@ -4,7 +4,6 @@ import ItemSale from '../Item/ItemSale'
 
 const ItemList = ({products}) => {
 
-    console.log(products)
 
     return (
 

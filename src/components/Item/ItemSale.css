@@ -12,9 +12,6 @@
     font-weight: 500;
   }
   
-  .ItemImg {
-    
-  }
 
   .prices{
     display: flex;
@@ -35,4 +32,15 @@
   .tachado {
     text-decoration: line-through;
     font-weight: bold;
+  }
+
+
+  .ItemHeaderSale{
+    margin: 5px;
+    font-size: 100%;
+    font-weight: 400;
+    min-height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }

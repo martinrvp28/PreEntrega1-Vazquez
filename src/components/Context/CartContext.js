@@ -24,6 +24,13 @@ export const CartProvider = ({children}) => {
 
                     const newQuant = quantity;
                     const actualquant = prod.quantity;
+                    console.log(prod.stock)
+
+                    if (item.stock<(actualquant+newQuant)) {
+
+                        return {...prod,
+                                quantity:(item.stock)}
+                    }
 
                     return {
                         ...prod,
@@ -108,9 +115,12 @@ export const CartProvider = ({children}) => {
         setTotalPrice(total);
     }
 
+    const DiscPrice = (price,disc) => {
+        return Math.floor(price * (1 - disc / 100));
+    }
 
     return (
-        <CartContext.Provider value={{cart, totalPrice, addItem, removeItem, clearCart, totalQuantity, addOnCart, removeOnCart}}>
+        <CartContext.Provider value={{cart, totalPrice, addItem, removeItem, clearCart, totalQuantity, addOnCart, removeOnCart, DiscPrice}}>
             {children}
         </CartContext.Provider>
     )

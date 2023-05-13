@@ -1,10 +1,11 @@
 import './ItemSale.css'
 import { Link } from 'react-router-dom'
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { CartContext } from '../Context/CartContext';
 
 const ItemSale = ({id, name, img, price, offprice, disc,}) => {
 
-    const discountedPrice = price * (1 - disc / 100);
+    const {DiscPrice} = useContext(CartContext);
 
     return(
         <article className='CardItem'>
@@ -22,7 +23,7 @@ const ItemSale = ({id, name, img, price, offprice, disc,}) => {
 
             <header className='Header'>
 
-                <h2 className='ItemHeader'>
+                <h2 className='ItemHeaderSale'>
                     {name}
                 </h2>
 
@@ -32,7 +33,7 @@ const ItemSale = ({id, name, img, price, offprice, disc,}) => {
     
                 <div className='prices'>
                 <p className='InfoDisc'>Antes <span className='tachado' >${price}</span></p>
-                <p className='Info'>${discountedPrice}</p>
+                <p className='Info'>${DiscPrice(price,disc)}</p>
                 </div>
                 
 
