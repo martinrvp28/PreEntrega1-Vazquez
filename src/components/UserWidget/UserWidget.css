@@ -1,0 +1,74 @@
+.containerUserWidget{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.containerUserWidget img{
+    width: 120%;
+}
+
+.containerUserWidget ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    background-color: white;
+
+}
+
+.containerUserWidget ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    height: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    width: 100%;
+    color: black;
+}
+
+.containerUserWidget a{
+    text-decoration: none;
+    min-width: 100%
+   
+}
+
+
+.containerUserWidget ul li:hover{
+
+    width: 100%;
+    background-color: red;
+    color: white;
+    transform: scale(1);
+    
+}
+
+.containerInfo{
+    display: none;
+    width: 220px;
+}
+
+.containerInfo.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    background-color: white;
+    border: 1px solid red;
+}
+
+.userName{
+    font-weight: bold;
+}
+

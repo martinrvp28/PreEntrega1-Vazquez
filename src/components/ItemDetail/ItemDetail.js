@@ -72,7 +72,7 @@ const ItemDetail = ({id,name,price,img,category,stock,description,disc}) => {
                             quantityAdded>0 ? (
                                 <div className="containerOption">
                                     <Link to='/' className='Option'>Volver a Productos</Link>
-                                    <Link to='/cart' className='Option'>Finalizar Compra</Link>
+                                    <Link to='/cart' className='Option'>Ir al Carrito</Link>
                                 </div>
                             ):
 

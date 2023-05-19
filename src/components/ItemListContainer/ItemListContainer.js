@@ -39,7 +39,6 @@ const ItemListContainer = ({greeting}) => {
     return(
 
         <div className="mainList">
-            <h1>{greeting}</h1>
             <ItemList products={products}/>
         </div>
     )

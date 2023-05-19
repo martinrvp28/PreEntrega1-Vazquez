@@ -1,0 +1,39 @@
+.containerBuyList{
+    margin-top: 250px;
+    margin-bottom: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerBuyList table{
+    max-width: 1200px;
+}
+
+.containerTr{
+    display: flex;
+    flex-direction: column;
+}
+
+.trTitle{
+    background-color: red;
+    color: white;
+}
+
+.trTitleMini{
+    background-color: rgba(190, 95, 18, 0.849);
+    color: white;
+}
+
+.pointer{
+    cursor: pointer;
+
+}
+
+.pointer:hover{
+    background-color: rgb(255, 197, 197);
+}
+
+.thspan.active{
+    
+}

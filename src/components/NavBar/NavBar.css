@@ -2,6 +2,11 @@
     display: flex;
     flex-direction: column;
     border-top: solid 35px red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
 }
 
 .logo{
@@ -14,7 +19,7 @@
     justify-content: center;
     align-items: center;
     list-style: none;
-    gap: 90px;
+    gap: 50px;
     background-color: red;
 }
 
@@ -39,7 +44,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0px 40px;
+    padding: 0px 40px;
+    background-color: white;
 }
 
 .containerLogo-cart a {
@@ -48,6 +54,22 @@
 
 .cart {
     margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    
+}
+
+.cart button {
+
+    color: rgb(0, 0, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    background-color: white;
+    border: none;
+
 }
 
 .catList {
@@ -76,6 +98,9 @@
 
     .navBar ul {
         display: none;
+        justify-content: start;
+        padding-top:40px;
+        background-color: rgb(255, 0, 0);
     }
 
     .menu {
@@ -87,11 +112,18 @@
     }
 
     .menu.active {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+
+        transition: all 2s;
+        -webkit-transition: all 0.5s;
+        position: fixed;
+        left: 0;
+        top: 138px;
+        width: 150px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
     }
 
     .menu.active + .navBar ul {

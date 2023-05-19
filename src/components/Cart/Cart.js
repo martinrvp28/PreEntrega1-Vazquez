@@ -3,13 +3,15 @@ import { CartContext } from "../Context/CartContext"
 import { Link } from "react-router-dom"
 import CartItem from "../CartItem/CartItem"
 import './Cart.css'
+import { AuthContext } from "../Context/AuthContext"
 
 
 
 
 const Cart = () => {
     
-    const {cart, clearCart, totalQuantity, totalPrice} = useContext(CartContext)
+    const {cart, clearCart, totalQuantity, totalPrice} = useContext(CartContext);
+    const {user} = useContext(AuthContext);
 
     if (cart.length === 0) {
         return( 
@@ -42,7 +44,12 @@ const Cart = () => {
             <h3>Total: ${totalPrice}</h3>
             <div className="containerBut">
                 <button onClick={() => clearCart()} className="Button"> Vaciar Carrito</button>
-                <Link to='checkout'><button className='Button'>CheckOut</button></Link>
+                
+                {user.loggedIn ? (<Link to='checkout'><button className='Button'>Finalizar Compra</button></Link>) 
+                :
+                (<Link to='../Auth'><button className='Button'>Finalizar Compra</button></Link>)
+                }
+
             </div>
         </div>
 

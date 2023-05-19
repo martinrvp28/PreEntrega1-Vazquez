@@ -13,6 +13,7 @@
     justify-content: center;
     align-items: center;
     gap: 60px;
+    margin-top: 160px;
 }
 
 .cartContainer table{
@@ -58,6 +59,24 @@
     border: 1px solid red;
 }
 
+.containerActions Button{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 4px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgb(255, 0, 0);
+    width: 200px;
+}
+
+.containerActions Button:hover{
+    background-color: white;
+    color: red;
+    border: 1px solid red;
+}
 
 
 @media only screen and (max-width:576px) {
