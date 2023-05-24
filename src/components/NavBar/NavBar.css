@@ -1,5 +1,5 @@
 .navBar {
-    display: flex;
+    display: block;
     flex-direction: column;
     border-top: solid 35px red;
     position: fixed;
@@ -7,6 +7,11 @@
     left: 0;
     width: 100%;
     z-index: 1;
+
+}
+
+.nav-item{
+    height: 50px;
 }
 
 .logo{
@@ -14,16 +19,26 @@
     float: left;
 }
 
-.navBar ul {
+.catUl {
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
-    gap: 50px;
+    gap: 80px;
     background-color: red;
+    padding: 0;
+    margin: 0;
 }
 
-.navBar ul li a {
+.catUl .nav-item{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.catUl .nav-item .link {
     text-decoration: none;
     color: black;
     font-size: medium;
@@ -31,22 +46,44 @@
     color: white;
 }
 
-.navBar ul li:hover {
+.catUl .nav-item:hover {
     transform: scale(1.05);
     transition-duration: 0.1s;
 }
 
-.navBar ul li a:hover {
+.catUl .nav-item .link:hover {
     color: yellow;
+}
+
+ul .nav-item ul.dropdown .nav-item {
+    background-color: white;
+    color: red;
+}
+
+ul .nav-item ul.dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    position: absolute;
+    top: 35px;
+    z-index: 10;
+    display: none;
+}
+
+ul .nav-item:hover ul.dropdown{
+    display: block;
 }
 
 .containerLogo-cart {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 40px;
     background-color: white;
+    padding: 0px 50px;
+
 }
+
 
 .containerLogo-cart a {
     max-width: 100px;
@@ -111,7 +148,7 @@
     display: flex;
     }
 
-    .menu.active {
+    .catUl.active {
 
         transition: all 2s;
         -webkit-transition: all 0.5s;
@@ -126,11 +163,11 @@
 
     }
 
-    .menu.active + .navBar ul {
+    .catUl.active + .navBar ul {
     display: flex;
     }
 
-    .menu li {
+    .menu .nav-item {
     margin-bottom: 0;
     }
 

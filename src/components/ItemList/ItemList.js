@@ -7,7 +7,7 @@ const ItemList = ({products}) => {
 
     const [currentPage, setCurrentPage] = useState(1);
 
-    const cardsPerPage = 8;
+    const cardsPerPage = 10;
     const indexOfLastCard = currentPage*cardsPerPage;
     const indexOfFirstCard = indexOfLastCard-cardsPerPage;
     const currentProducts = products.slice(indexOfFirstCard, indexOfLastCard);

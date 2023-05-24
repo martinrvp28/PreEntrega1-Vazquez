@@ -1,11 +1,13 @@
-.App {
-  text-align: center;
-  
-
+*{
+  margin:0;
+  padding:0;
 }
 
-html {
-  margin: 0px;
-  padding: 0px;
+*,::before,::after{
   box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+
 }

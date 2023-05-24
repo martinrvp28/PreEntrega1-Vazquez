@@ -2,7 +2,7 @@
 
     width: 85%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(280px,100%), 1fr));
+    grid-template-columns: repeat(5,1fr);
     gap: 40px 0px;
     place-items: center;
 }
@@ -14,7 +14,6 @@
     justify-content: center;
     align-items: center;
     gap: 100px;
-    margin-top: 80px;
 }
 
 .containerButtonPage{
@@ -31,6 +30,7 @@
     border-radius: 100%;
     color: red;
     font-size: 1rem;
+    width: 1.2rem;
     
 }
 

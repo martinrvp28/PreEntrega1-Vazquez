@@ -1,0 +1,38 @@
+.submenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline-start: 0px;
+    background-color: white;
+    border: 2px solid red;
+    list-style: none;
+    position: absolute;
+    top: 47px;
+    width: 250px;
+}
+
+.submenu a li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 30px;
+    padding: 5px 0px;
+}
+
+.submenu a{
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+
+.submenu li:hover {
+    background-color: red;
+}
+
+.submenu a li:hover{
+    background-color: red;
+    color: white;
+    
+}

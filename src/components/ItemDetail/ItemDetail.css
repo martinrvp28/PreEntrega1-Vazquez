@@ -28,11 +28,13 @@ picture img {
 
 .description{
     font-size: 1.2rem;
+    margin: 5px;
 }
 
 .stock{
     font-size: 1.5rem;
     font-weight: bold;
+    margin: 30px;
 }
 
 

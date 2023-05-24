@@ -14,17 +14,18 @@ import Banner from './components/Banner/Banner';
 import Auth from './components/Auth/Auth';
 import Data from './components/UserWidget/Data';
 import LastBuysList from './components/UserWidget/LastBuysList';
+import Home from './components/Home/Home';
 
 const DefaultLayout = () => (
   <div className="App">
 
-  
     <NavBar />
     <Banner />
 
     <Routes>
-      <Route path="/" element={<ItemListContainer />} />
+      <Route path="/" element={<Home/>} />
       <Route path="/category/:categoryId" element={<ItemListContainer />} />
+      <Route path="/category/:categoryId/:subCatId" element={<ItemListContainer />} />
       <Route path="/item/:itemId" element={<ItemDetailContainer />} />
       <Route path="/ultimas-unidades" element={<LastUnitsContainer />} />
       <Route path="/cart" element={<Cart />} />

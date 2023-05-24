@@ -35,8 +35,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 120px;
     gap: 20px;
+}
+
+.containerNoItems h1{
+    margin-top: 100px;
 }
 
 .containerNoItems a{

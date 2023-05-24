@@ -3,9 +3,12 @@ import CartWidget from '../CartWidget/CartWidget';
 import Logo1 from '../../assets/img/label1.png';
 import { useState, useContext } from 'react';
 
-import { Link, NavLink } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import { AuthContext } from '../Context/AuthContext';
 import UserWidget from '../UserWidget/UserWidget';
+
+import { category } from './NavBarItems';
+import Dropdown from './Dropdown';
 
 
 const NavBar = () => {
@@ -13,14 +16,23 @@ const NavBar = () => {
     const {user} = useContext(AuthContext);
 
     const [isActive, setIsActive] = useState(false);
+    const [dropdown, setDropdown] = useState(null);
 
     const handleMenuClick = () => {
         setIsActive(!isActive);
     };
 
+    const handleDropdownMenuIn = (index) => {
+        setDropdown(index);
+    }
+
+    const handleDropdownMenuOut = () => {
+        setDropdown(null);
+    }
 
     return (
         <nav className="navBar">
+            <div className='testMargin'>
 
             <div className='containerLogo-cart'>
                 <Link to={'/'}>
@@ -35,18 +47,25 @@ const NavBar = () => {
                 
             </div>
 
+            </div>
+
             <div className="catList">
                 <div className="menu-icon" onClick={handleMenuClick}>
                     <img className="icon" src='/img/burguer.svg'></img>
                 </div>
 
-                <ul className={`menu ${isActive ? 'active' : ''}`}>
+                <ul className={`catUl ${isActive ? 'active' : ''}`}>
 
-                    <li onClick={handleMenuClick}> <NavLink to={'/category/alimentos'} href='#'>ALIMENTOS</NavLink> </li>
-                    <li onClick={handleMenuClick}> <NavLink to={'/category/bebidas'} href='#'>BEBIDAS</NavLink> </li>
-                    <li onClick={handleMenuClick}> <NavLink to={'/category/limpieza'} href='#'>LIMPIEZA</NavLink> </li>
-                    <li onClick={handleMenuClick}> <NavLink to={'category/ofertas'} href='#'>OFERTAS</NavLink> </li>
-                    <li onClick={handleMenuClick}> <NavLink to={'/ultimas-unidades'} href='#'>ULTIMAS UNIDADES</NavLink> </li>
+                    {
+                    category.map((item,index) => {
+                        return(
+                            <li key={item.id} className={item.cName} onMouseEnter={() => handleDropdownMenuIn(index)} onMouseLeave={() => handleDropdownMenuOut()}>
+                                <Link className='link' to={item.path}>{item.title}</Link>
+                                {dropdown === index && item.subCat && <Dropdown info={item.subCat} />}
+                            </li>
+                        )
+                        
+                    })}
                 
                 </ul>
             </div>

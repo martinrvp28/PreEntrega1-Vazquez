@@ -1,0 +1,20 @@
+.imgCard{
+    width: 200px;
+}
+
+
+@media only screen and (max-width:576px) {
+
+    .imgCard{
+        width: 100px;
+    }
+
+}
+
+@media only screen and (max-width:1050px) {
+
+    .imgCard{
+        width: 130px;
+    }
+
+}
