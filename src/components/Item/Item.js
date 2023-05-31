@@ -22,9 +22,8 @@ const Item = ({id, name, img, price, stock}) => {
 
             <section>
     
-                <p className='Info'>
-                    ${price}
-                </p>
+                <p className='Info'>${price}</p>
+                
 
             </section>
 

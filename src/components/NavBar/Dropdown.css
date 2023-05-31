@@ -9,16 +9,16 @@
     list-style: none;
     position: absolute;
     top: 47px;
-    width: 250px;
+    width: 280px;
 }
 
 .submenu a li{
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 250px;
+    font-size: .9rem;
+    width: 280px;
     height: 30px;
-    padding: 5px 0px;
+    padding: 5px 15px;
 }
 
 .submenu a{

@@ -44,3 +44,19 @@
     transform: none;
     border: 1px solid rgba(255, 0, 0, 0.151);
 }
+
+@media only screen and (max-width: 1200px) {
+
+    .ListGroup{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+}
+
+@media only screen and (max-width: 990px) {
+
+    .ListGroup{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}

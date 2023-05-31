@@ -85,9 +85,15 @@ const LastBuysList = () => {
                         <tr className="" key={prodIndex}>
                             <th><img className='cartImg' src={prod.img} alt={prod.name}/></th>
                             <th>{prod.name}</th>
-                            <th>$ {prod.price}</th>
+                            {prod.quantity>2? <th>$ {prod.price[1]}</th>
+                            :
+                            <th>$ {prod.price[0]}</th>
+                            }
                             <th>{prod.quantity}</th>
-                            <th>$ {prod.price * prod.quantity}</th>
+                            {prod.quantity>2? <th>$ {prod.price[1] * prod.quantity}</th>
+                            :
+                            <th>$ {prod.price[0] * prod.quantity}</th>
+                            }
                         </tr>
                         ))}
 

@@ -31,7 +31,7 @@ const ItemSale = ({id, name, img, price, offprice, disc,}) => {
 
             <section>
     
-                <div className='prices'>
+                <div className='pricesSale'>
                 <p className='InfoDisc'>Antes <span className='tachado' >${price}</span></p>
                 <p className='Info'>${DiscPrice(price,disc)}</p>
                 </div>

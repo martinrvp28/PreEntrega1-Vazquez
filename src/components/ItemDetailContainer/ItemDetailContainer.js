@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react"
-import Item from "../Item/Item";
-import { getProductById } from "../../asyncmock";
 import ItemDetail from "../ItemDetail/ItemDetail"
 
 import { useParams } from "react-router-dom";
@@ -19,27 +17,43 @@ const ItemDetailContainer = () => {
 
 
     useEffect(() => {
+        const fetchProduct = async () => {
+        try {
+            const docRef = doc(db, "products", itemId);
+            const response = await getDoc(docRef);
+            const data = response.data();
+            const productAdapted = { id: response.id, ...data };
+            setProduct(productAdapted);
+            
+        } catch (error) {
+            console.log(error);
+        }
+        };
+    
+        fetchProduct();
+    }, [itemId]);
+    
 
-        const docRef = doc(db, 'products', itemId)
 
-        getDoc(docRef)
-            .then(response => {
-                const data = response.data()
-                const productAdapted = {id: response.id, ...data}
-                setProduct(productAdapted)
-            })
-            .catch(error => {
-                console.log(error)
-            })
-        
-    }, [itemId])
 
 
 return (
-    <div className="ItemDetailContainer">
-        <ItemDetail {...product} />
-    </div>
-)
+  <div className="ItemDetailContainer">
+    {product ? (
+      <ItemDetail {...product} />
+    ) : (
+      <p>Cargando producto...</p>
+    )}
+  </div>
+  
+);
+
+
+
+
+
+
+
 
 }
 

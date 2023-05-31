@@ -26,7 +26,6 @@
 
 
 header h2{
-    margin: 5px;
     font-size: .85rem;
     font-weight: 400;
     min-height: 45px;
@@ -36,17 +35,13 @@ header h2{
 }
 
 .Info{
-    font-size: 150%;
+    font-size: 1rem;
     font-weight: bold;
     margin: 0;
 }
 
-.Info2{
-    margin: 5px;
-}
-
 footer{
-    margin-top: 8px;
+    margin-top: 15px;
 
 }
 
@@ -66,4 +61,11 @@ footer{
     background-color: white;
     color: black;
     border: 1px solid black;
+}
+
+.prices {
+    border-bottom: 1px solid rgba(180, 180, 180, 0.575);
+    width: 100%;
+    padding: 3px;
+    font-size: .9rem;
 }

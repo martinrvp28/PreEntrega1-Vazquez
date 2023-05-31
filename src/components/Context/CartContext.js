@@ -29,7 +29,6 @@ export const CartProvider = ({children}) => {
 
                     const newQuant = quantity;
                     const actualquant = prod.quantity;
-                    console.log(prod.stock)
 
                     if (item.stock<(actualquant+newQuant)) {
 
@@ -115,6 +114,7 @@ export const CartProvider = ({children}) => {
         let total = 0;
         cart.map(p => {
             total=total+(p.price*(p.quantity))
+
         })
 
         setTotalPrice(total);

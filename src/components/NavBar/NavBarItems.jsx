@@ -11,14 +11,15 @@ export const category = [
             {id:2, title:'Aceite - Vinagre', path:'category/alimentos/aceite-vinagre'},
             {id:3, title:'Azucar - Edulcorantes', path:'category/alimentos/azucar-edulcorantes'},
             {id:4, title:'Yerba', path:'category/alimentos/yerba'},
-            {id:5, title:'Galletas - Copetin', path:'category/alimentos/galletas-copetin'},
-            {id:6, title:'Harina - Levadura - Pure', path:'category/alimentos/harina-levadura-pure'},
-            {id:7, title:'Arroz - Legumbres', path:'category/alimentos/arroz-legumbres'},
-            {id:8, title:'Cereales - Avena', path:'category/alimentos/cereales-avena'},
-            {id:9, title:'Harina - Levadura - Pure', path:'category/alimentos/harina-levadura-pure'},
-            {id:10, title:'Aderezos - Salsas', path:'category/alimentos/aderezos-salsas'},
-            {id:11, title:'Sal - Condimentos', path:'category/alimentos/sal-condimentos'},
-            {id:12, title:'Pastas', path:'category/alimentos/pastas'}
+            {id:5, title:'Harina - Levadura - Pure', path:'category/alimentos/harina-levadura-pure'},
+            {id:6, title:'Arroz - Legumbres', path:'category/alimentos/arroz-legumbres'},
+            {id:7, title:'Pasta- Cereales - Avena', path:'category/alimentos/pasta-cereales-avena'},
+            {id:8, title:'Galletas - Copetin', path:'category/alimentos/galletas-copetin'},
+            {id:9, title:'Enlatados - Conservas', path:'category/alimentos/enlatados'},
+            {id:10, title:'Condimentos - Aderezos - Salsas', path:'category/alimentos/condimentos-aderezos-salsas'},
+            {id:11, title:'Dulces - Mermeladas', path:'category/alimentos/dulces-mermeladas'},
+            {id:12, title:'Golosinas - Chocolates', path:'category/alimentos/golosinas-chocolates'},
+            {id:13, title:'Congelados - Tapas - Pizzas', path:'category/alimentos/congelados-tapas-pizzas'},
         ]
     },
     {
@@ -49,8 +50,9 @@ export const category = [
         path: "/category/higiene-personal",
         cName:"nav-item",
         subCat:[
-            {id:1, title:'Shampoo', path:'category/higiene-personal/shampoo'},
+            {id:1, title:'Shampoo - Acondicionador', path:'category/higiene-personal/shampoo'},
             {id:2, title:'Jabon Corporal', path:'category/higiene-personal/jabon-corporal'},
+            {id:3, title:'Higiene Femenina', path:'category/higiene-personal/higiene-femenina'}
         ]
     },
     {

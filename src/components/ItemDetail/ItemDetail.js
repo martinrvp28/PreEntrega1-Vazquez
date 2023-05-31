@@ -6,7 +6,7 @@ import { CartContext } from "../Context/CartContext";
 
 
 
-const ItemDetail = ({id,name,price,img,category,stock,description,disc}) => {
+const ItemDetail = ({id,name,price,img,stock,description,disc}) => {
 
     const [quantityAdded, setQuantityAdded] = useState(0);
 
@@ -64,7 +64,10 @@ const ItemDetail = ({id,name,price,img,category,stock,description,disc}) => {
                                 <p className="price">${discountedPrice}</p>
                             </div>
                             ) :
-                             <p className="price">${price}</p>}
+                            <div>
+                                <p className="price">${price}</p>
+                            </div>
+                            }
                         </div>
 
 

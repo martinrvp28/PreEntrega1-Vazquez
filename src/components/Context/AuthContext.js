@@ -29,8 +29,6 @@ export const AuthProvider = ({children}) => {
           const collectionRef = collection(db, "users");
           const q = query(collectionRef, where("email", "==", user.username));
           const response = await getDocs(q);
-          console.log(user.username)
-          console.log(response.docs.length)
           if (response.docs.length > 0) {
               const doc = response.docs[0];
               const userData = { id: doc.id, ...doc.data() };
